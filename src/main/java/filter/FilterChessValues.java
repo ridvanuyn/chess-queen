@@ -34,19 +34,33 @@ public class FilterChessValues {
     int multiply = 1;
     for (int positionX : obstaclesPositionX) {
       if (queenPositionX == positionX) {
-        for (int positionY : obstaclesPositionY) {
-          if (queenPositionY == positionY) {
-            throw new ValueException(ExceptionCode.QUEEN_AND_OBSTACLE_SAME_SPOT);
-          }
-          multiply = positionX * positionY * multiply;
-          if (multiply < 0) {
-            throw new ValueException(ExceptionCode.VALUES_CAN_NOT_BE_NEGATIVE_OR_ZERO);
-          }
-        }
+        multiply = checkPositionXAndPositionY(queenPositionY, obstaclesPositionY, multiply,
+            positionX);
       }
 
     }
   }
 
+  private static int checkPositionXAndPositionY(int queenPositionY, int[] obstaclesPositionY,
+      int multiply, int positionX) throws ValueException {
+    for (int positionY : obstaclesPositionY) {
+      if (queenPositionY == positionY) {
+        throw new ValueException(ExceptionCode.QUEEN_AND_OBSTACLE_SAME_SPOT);
+      }
+      multiply = positionX * positionY * multiply;
+      if (multiply < 0) {
+        throw new ValueException(ExceptionCode.VALUES_CAN_NOT_BE_NEGATIVE_OR_ZERO);
+      }
+    }
+    return multiply;
+  }
 
+  public static void obstacleCountAndObstacleArraySize(int obstacleCount,
+      int[] obstaclesPositionX, int[] obstaclesPositionY) throws ValueException {
+
+    if (obstacleCount != obstaclesPositionX.length || obstacleCount != obstaclesPositionY.length) {
+      throw new ValueException(ExceptionCode.OBSTACLE_COUNT_OBSTACLE_ARRAY_MISMATCH);
+    }
+
+  }
 }

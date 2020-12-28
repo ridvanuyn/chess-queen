@@ -78,4 +78,11 @@ public class ChessMainTest {
         5, 200, -3, 3, obstaclesPosX, obstaclesPosY),
         ExceptionCode.VALUES_CAN_NOT_BE_NEGATIVE_OR_ZERO.getMessage());
   }
+
+  @Test
+  public void shouldThrowError_WhenObstacleCountAndObstacleArrayMismatch() throws ValueException {
+    assertThrows(ValueException.class, () -> ChessMain.calculateQueenPossibility(
+        5, 3, -3, 3, obstaclesPosX, obstaclesPosY),
+        ExceptionCode.OBSTACLE_COUNT_OBSTACLE_ARRAY_MISMATCH.getMessage());
+  }
 }

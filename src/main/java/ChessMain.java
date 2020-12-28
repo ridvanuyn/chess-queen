@@ -26,6 +26,7 @@ public class ChessMain {
     FilterChessValues.checkChessAndObstacleSizes(chessSize, obstacleCount);
     FilterChessValues.queenPositionIsNegative(queenPositionX, queenPositionY);
     FilterChessValues.obstacleCountIsNegative(obstacleCount);
+    FilterChessValues.obstacleCountAndObstacleArraySize(obstacleCount,obstaclesPositionX,obstaclesPositionY);
     FilterChessValues
         .checkPositionQueenAndObstacle(queenPositionX, queenPositionY, obstaclesPositionX,
             obstaclesPositionY);
