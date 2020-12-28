@@ -6,7 +6,7 @@ import filter.FilterChessValues;
 public class ChessMain {
 
 
-  static int calculateQueenPossibility(int chessSize, int obstacleCount, int queenPositionX,
+  public static int calculateQueenPossibility(int chessSize, int obstacleCount, int queenPositionX,
       int queenPositionY, int[] obstaclesPositionX, int[] obstaclesPositionY)
       throws ValueException {
 
