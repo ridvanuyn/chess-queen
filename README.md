@@ -43,7 +43,8 @@
   
  - Create Failure Test with 
  
-  ```json
+ 
+```json
      {
        "chessSize": 5,
        "obstacleCount": 1,
@@ -52,7 +53,7 @@
        "obstaclePositionX": "[1,2]",
        "obstaclePositionY": "[1,2]"
      }
-     ```
+   ```
 
 
 ### Problem 1 :
