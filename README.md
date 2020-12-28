@@ -15,7 +15,7 @@
 
   - [x] Documentation
 
-###Problem 1 :
+### Problem 1 :
 ![alt text](https://s3.amazonaws.com/hr-challenge-images/0/1485426500-a4039ebb00-chess1.png)
 
 
