@@ -1,5 +1,7 @@
 ## Chess Queen Challenge Project
 ### TECH DETAILS
+ - [x] AWS Lambda Integration
+ 
  - [x] JAVA SE
 
   - [x] Maven
@@ -14,7 +16,43 @@
   - [x] Error Handling
 
   - [x] Documentation
+  
+  ### Run App with Java
+  
+  ```bash
+  clean install
+  ```
+  ### Run App with AWS Lambda
+  
+    ```bash
+    clean install
+    ```
+- Copy .jar file to AWS Console.
+- Create Success Test with 
 
+  ```json
+    {
+      "chessSize": 5,
+      "obstacleCount": 1,
+      "queenPositionX": 2,
+      "queenPositionY": 1,
+      "obstaclePositionX": "[1]",
+      "obstaclePositionY": "[1]"
+    }
+    ```
+  
+ - Create Failure Test with 
+ 
+  ```json
+     {
+       "chessSize": 5,
+       "obstacleCount": 1,
+       "queenPositionX": 2,
+       "queenPositionY": 1,
+       "obstaclePositionX": "[1,2]",
+       "obstaclePositionY": "[1,2]"
+     }
+     ```
 ### Problem 1 :
 ![alt text](https://s3.amazonaws.com/hr-challenge-images/0/1485426500-a4039ebb00-chess1.png)
 
